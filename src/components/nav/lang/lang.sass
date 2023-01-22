@@ -1,0 +1,37 @@
+.lang
+    display: flex
+    font-size: 1rem
+    &__arrow
+        margin-left: 11px
+        cursor: pointer
+        img
+            width: 10px
+    &__wrap
+        position: relative
+        &:hover .lang-menu
+            display: block
+    &-menu
+        &__wrap
+            width: 55px
+            height: 80px
+            position: absolute
+            top: 15px
+        width: 55px
+        padding: 7px 0
+        text-align: center
+        border: 1px solid #E6EDF0
+        font-size: .8rem
+        cursor: pointer
+        transition: .3s linear
+        transform: translateY(-10px)
+        opacity: 0
+        background-color: #fff
+        display: none
+        animation: lang-show .3s linear 1 .3s forwards
+        @keyframes lang-show
+            100%
+                opacity: 1
+                transform: translateY(15px)
+    &__item
+        &:hover
+            color: #007DFF
