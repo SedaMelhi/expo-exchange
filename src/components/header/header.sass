@@ -1,15 +1,85 @@
 .header
-    &__text
-        max-width: 714px
-        margin: 70px auto
-        text-align: center
-    &__count
-        text-transform: uppercase
-        color: #007DFF
-    &__title
-        margin: 16px 0 24px
-        font-weight: 700
-        font-size: 3.5rem
-        line-height: 68px
-        span
-            color: #007DFF
+    position: relative
+    text-align: center
+    padding: 70px 0 0
+    &__image
+        max-width: 858px
+        margin: 70px auto 0
+        img
+            width: 100%    
+
+
+.button
+        width: 161px
+        height: 60px
+        background: #007DFF
+        border-radius: 12px
+        margin-top: 48px 
+        color: #FFFFFF
+        cursor: pointer
+        transition: .3s
+        &:hover
+            background: #005bbb
+
+.circle
+    &_blue
+        width: 90px
+        height: 90px
+        background-color: #F5FBFF
+        top: 25%
+        left: 20%
+    &_brow
+        width: 70px
+        height: 70px
+        right: 6%
+        top: 23%
+        background: #FFF9F5
+    &_green
+        width: 116px
+        height: 116px
+        background-color: #F9FFF5
+        right: 0px
+        top: 50%
+    &_yellow
+        width: 70px
+        height: 70px
+        background-color:  #FFFCF5
+        left: 0
+        top: 60%
+    z-index: -1
+    border-radius: 50%
+    display: flex
+    align-items: center
+    justify-content: center
+    position: absolute
+    overflow: hidden
+    transform: translateY(50px)
+    opacity: 0
+        
+header.animation
+    .circle
+        @for $i from 3 to 7
+            &:nth-child(#{$i})
+                $time: $i/3
+                animation: showCircle .3s linear 1 #{$time}s forwards
+        @keyframes showCircle
+            70%
+                transform: translateY(-15px)
+            100%
+                transform: translateY(0px)
+                opacity: 1 
+        &_blue img
+            animation: showIcon .3s linear 1 1.5s forwards
+            transform: translate(-50px, 50px)
+            @keyframes showIcon   
+                100%
+                    transform: translate(0px)
+        &_brow img, &_yellow img
+            animation: showIcon .3s linear 1 1.8s forwards
+            transform: translate(0px, -50px)
+        &_green img
+            animation: showIcon .3s linear 1 1.2s forwards
+            transform: translate(-60px, 60px)
+            @keyframes showIcon   
+                100%
+                    transform: translate(0px)

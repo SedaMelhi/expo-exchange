@@ -1,15 +1,32 @@
+import {useState} from 'react';
+import Description from '../description/description';
 import './header.sass'
 
 const Header = () => {
+    const [imgState, setImgState] = useState(false)
+    
     return(
-        <header>
+        <header className={imgState ? "animation":""} alt="" onLoad={() => setImgState(true)}>
             <div className="wrap">
             <div className="header">
-                <div className="header__text">
-                    <div className="header__count">1000+ successful deals</div>
-                    <div className="header__title"><span>P2P</span> taken to another level</div>
-                    <div className="header__description">Cash transfer in different currencies across the world. Low commission rate and cashback in cryptocurrency </div>
-                    <button className="header__button">Get started</button>
+                <div className="description__wrap">
+                    <Description 
+                        count="1000+ successful deals" 
+                        title={{span: "P2P", text: "taken to another level"}}
+                        text="Cash transfer in different currencies across the world. Low commission rate and cashback in cryptocurrency "/>
+                </div>
+                <button className="button">Get started</button>
+                <div className="circle circle_blue">
+                    <img src="./img/plane.svg" alt=""/>
+                </div>
+                <div className="circle circle_brow">
+                    <img src="./img/bag.svg" alt=""/>
+                </div>
+                <div className="circle circle_green">
+                    <img src="./img/money.svg" alt=""/>
+                </div>
+                <div className="circle circle_yellow">
+                    <img src="./img/hands.svg" alt=""/>
                 </div>
                 <div className="header__image">
                     <img src="./img/header.png" alt="" />
