@@ -1,11 +1,16 @@
 import {useState} from 'react';
+import { useTranslation } from 'react-i18next';
+import i18n from '../../18n/18n';
 import './lang.sass';
 
 const Lang = () =>{
+    const { t, i18n } = useTranslation();
     const activeLang = localStorage.getItem("lang") ? localStorage.getItem("lang"): "En";
     const [lang, setLang] = useState(activeLang)
-
-    const changeLang = (lang) => {
+    const changeLanguage = (language) => {
+        i18n.changeLanguage(language);
+    };
+    const changeText = (lang) => {
         setLang(lang)
         localStorage.setItem("lang", lang)
     }
@@ -20,8 +25,14 @@ const Lang = () =>{
                 </div>
                 <div className="lang-menu__wrap">
                     <div className="lang-menu">
-                        <div className="lang__item" onClick={() => {changeLang('En')}}>EN</div>
-                        <div className="lang__item" onClick={() => {changeLang('Ru')}}>RU</div>
+                        <div className="lang__item" onClick={() => {
+                            changeText('En')
+                            changeLanguage('en')
+                        }}>EN</div>
+                        <div className="lang__item" onClick={() => {
+                            changeText('Ru')
+                            changeLanguage('ru')
+                        }}>RU</div>
                     </div>
                 </div>
             </div>

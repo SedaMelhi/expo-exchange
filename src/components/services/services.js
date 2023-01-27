@@ -1,38 +1,38 @@
-import Description from '../description/description'
+import { useTranslation } from 'react-i18next';
+import Description from '../description/description';
 import Service from './service/service';
 import './services.sass'
 
-const servicesData = [
-    {
-        icon: "./img/icon1.svg",
-        title: "Easy deal administration",
-        description: "We have automated the process of transactions and interaction between the sides of the deal. Active deals, requests, history are all available after completing the verification",
-        id: 1,
-    },
-    {
-        icon: "./img/icon2.svg",
-        title: "Two types of deal",
-        description: "You can enter deals both as a client and as a cash holder. It is also possible to transfer cryptocurrency if you do not have cash. The platform guarantees secure transactions",
-        id: 2,
-    },
-    {
-        icon: "./img/icon3.svg",
-        title: "Fast feedback and support",
-        description: "If there is any concern regarding the application status or the deal details you can always get an answer from our support centre",
-        id: 3,
-    }
-]
-
-
 const Services = () => {
+    const { t, i18n } = useTranslation();
+    const servicesData = [
+        {
+            icon: "./img/icon1.svg",
+            title: t("services_one-title"),
+            description: t("services_one-text"),
+            id: 1,
+        },
+        {
+            icon: "./img/icon2.svg",
+            title: t("services_two-title"),
+            description: t("services_two-text"),
+            id: 2,
+        },
+        {
+            icon: "./img/icon3.svg",
+            title: t("services_three-title"),
+            description: t("services_three-text"),
+            id: 3,
+        }
+    ]
     return(
-        <div className="services">
+        <div className="services" id='services'>
             <div className="wrap">
                 <div className="description__wrap">
                     <Description
                         count="1000+ successful deals"
-                        title={{text: "Our services"}}
-                        text="A platform for both clients and cash holders with step by step deal instructions, chat for better communication and application status tracking"/>
+                        title={{text: t("our_services")}}
+                        text={t("services_text")}/>
                 </div>
                 <div className="services__content">
                     <div className="services__left">

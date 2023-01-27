@@ -1,21 +1,22 @@
 import {useState} from 'react';
+import { useTranslation } from 'react-i18next';
 import Description from '../description/description';
 import './header.sass'
 
 const Header = () => {
+    const { t, i18n } = useTranslation();
     const [imgState, setImgState] = useState(false)
-    
     return(
         <header className={imgState ? "animation":""} alt="" onLoad={() => setImgState(true)}>
             <div className="wrap">
             <div className="header">
                 <div className="description__wrap">
                     <Description 
-                        count="1000+ successful deals" 
-                        title={{span: "P2P", text: "taken to another level"}}
-                        text="Cash transfer in different currencies across the world. Low commission rate and cashback in cryptocurrency "/>
+                        count={t("successful")} 
+                        title={{span: "P2P", text: t("header_title")}}
+                        text={t("header_text")}/>
                 </div>
-                <button className="button">Get started</button>
+                <button className="button">{t("header_btn")}</button>
                 <div className="circle circle_blue">
                     <img src="./img/plane.svg" alt=""/>
                 </div>

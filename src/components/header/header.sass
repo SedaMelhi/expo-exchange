@@ -10,16 +10,16 @@
 
 
 .button
-        width: 161px
-        height: 60px
-        background: #007DFF
-        border-radius: 12px
-        margin-top: 48px 
-        color: #FFFFFF
-        cursor: pointer
-        transition: .3s
-        &:hover
-            background: #005bbb
+    width: 161px
+    height: 60px
+    background: #007DFF
+    border-radius: 12px
+    margin-top: 48px 
+    color: #FFFFFF
+    cursor: pointer
+    transition: .3s
+    &:hover
+        background: #005bbb
 
 .circle
     &_blue
@@ -83,3 +83,37 @@ header.animation
             @keyframes showIcon   
                 100%
                     transform: translate(0px)
+
+@media screen and (max-width: 950px) 
+    .circle
+        &_brow
+            display: none
+        &_yellow
+            display: none
+        &_blue
+            top: 34%
+            left: 12%
+        &_green
+            top: 30%
+            width: 88px
+            height: 88px
+            img
+                width: 36px
+
+@media screen and (max-width: 768px)
+    .button
+        width: 127px 
+
+@media screen and (max-width: 530px)
+    .circle
+        display: none
+
+@media screen and (max-width: 480px)
+    .header
+        &__image
+            margin: 48px auto 0
+    .button
+        width: 100%
+        height: 44px
+        max-width: 327px 
+        margin-top: 32px

@@ -13,8 +13,8 @@ body
   font-size: 1.125rem
   line-height: 1.55rem
 .wrap
-  max-width: 1354px
-  padding: 0 32px
+  max-width: 1360px
+  padding: 0 35px
   margin: 0 auto
 a
   text-decoration: none
@@ -22,3 +22,17 @@ a
 button
   border: none
   font-size: inherit
+
+@media screen and (max-width: 768px)
+  .wrap
+    padding: 0 48px
+
+@media screen and (max-width: 660px)
+  html
+    font-size: 14px
+  .wrap
+    padding: 0 24px
+
+@media screen and (max-width: 330px)
+    html
+        font-size: 12px

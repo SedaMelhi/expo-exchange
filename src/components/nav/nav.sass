@@ -13,6 +13,10 @@ nav
     &__end
         display: flex
         align-items: center
+.logo
+    width: 194px
+    img
+        width: 100%
 .menu
     display: flex
     margin-left: 70px
@@ -31,3 +35,27 @@ nav
     font-size: 1rem
     margin-right: 28px
 
+@media screen and (max-width: 850px)
+    .menu
+        display: none
+
+@media screen and (max-width: 480px)
+    .log-in
+        width: 60px
+        height: 32px
+        margin-right: 8px
+        border-radius: 8px
+        font-size: .85rem
+    .logo
+        width: 135px
+    .lang__arrow
+        margin-left: 3px
+    .nav
+        &__end
+            font-size: .85rem
+
+@media screen and (max-width: 320px)
+    .nav
+        flex-direction: column
+        &__start
+            margin-bottom: 12px

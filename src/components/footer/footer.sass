@@ -1,7 +1,8 @@
 .footer
-    display: flex
+    display: grid
     justify-content: space-between
     width: 100%
+    grid-template-areas: "a b c d"
     &__title
         font-weight: 500
         font-size: 1.25rem
@@ -10,7 +11,19 @@
     &__link
         color: #70777A
         margin-bottom: 16px
-
+    &__logo
+        width: 153px
+        margin-top: 7px
+        margin-bottom: 32px
+    &__item
+        &:nth-child(1)
+            grid-area: a
+        &:nth-child(2)
+            grid-area: b
+        &:nth-child(3)
+            grid-area: c
+        &:nth-child(4)
+            grid-area: d
 .networks
     display: flex
     width: 100%
@@ -21,8 +34,64 @@
         border: 1px solid #E6EDF0
         width: 40px
         height: 40px
-        text-align: center
-        line-height: 40px
+        display: flex
+        justify-content: center
+        align-items: center
         border-radius: 8px
         
+@media screen and (max-width: 768px)
+    .footer
+        grid-template-areas: "a a" "c d" "c d"
+        &__item:nth-child(1)
+            display: flex
+            width: 100%
+            justify-content: space-between
+            align-items: center
+            margin-bottom: 38px
+            img
+                margin: 0
+        &__item:nth-child(2)
+            display: none
+    .networks
+        width: auto
+
+@media screen and (max-width: 768px)
+    .footer
+        font-size: 1rem
+        &__item
+            &:nth-child(1)
+                margin-bottom: 32px
+        &__title
+            font-size: 1.25rem
+            margin-bottom: 16px
+    .networks
+        &__item
+            width: 36px
+            height: 36px
+
+@media screen and (max-width: 390px)
+    .footer
+        &__logo
+            width: 130px
+
+@media screen and (max-width: 350px)
+    .networks
+        &__item
+            width: 32px
+            height: 32px
+            img
+                width: 16px
+            &:nth-child(2)
+                margin: 0 10px
+
+@media screen and (max-width: 330px)
+    .footer
+        &__item:nth-child(1)
+            flex-direction: column
+            .footer__logo
+                margin-bottom: 15px
+        &__logo
+            width: 150px
             
+        
+        
