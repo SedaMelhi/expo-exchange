@@ -1,9 +1,12 @@
 import Description from '../description/description';
 import { useTranslation } from 'react-i18next';
+import { useState } from 'react';
 import './steps.sass';
 
 const Steps = () => {
     const { t, i18n } = useTranslation();
+    const [btnClass, setBtnClass] = useState("btn-video")
+    setTimeout(() => setBtnClass("btn-video"), 2000)
     return(
         <div className="steps" id='deals'>
             <div className="wrap">
@@ -14,9 +17,10 @@ const Steps = () => {
                                 count={t("steps_count")}
                                 title={{text:t("steps_title")}}
                                 text={t("steps_text")}/>
-                                <button className='btn-video'>
+                                <button className={btnClass} onClick={() => setBtnClass(btnClass + " btn-video_show")}>
                                     <img src="./img/play.svg" alt="" />
                                     {t("watch")}
+                                    <div className="btn-video__soon">{t("soon")}...</div>
                                 </button>
                         </div>
                     </div>

@@ -1,21 +1,19 @@
-import Chat from "../chat/chat";
-import Faq from "../faq/faq";
-import Footer from "../footer/footer";
-import Header from "../header/header";
+import { useState } from "react";
 import Nav from "../nav/nav";
-import Services from "../services/services";
-import Steps from "../steps/steps";
+import Content from "../content/content";
+import Footer from "../footer/footer";
 
 import './app.sass'
+import Mvp from "../mvp/mvp";
 const App = () => {
+  const [btnClick, setBtnClick] = useState(false)
+  const onBtnClickHandle = () => {
+    setBtnClick(true)
+  }
   return(
     <main>
       <Nav/>
-      <Header/>
-      <Services/>
-      <Steps/>
-      <Chat/>
-      <Faq/>
+      {!btnClick ? <Content onBtnClick={onBtnClickHandle}/> : <Mvp/>}
       <Footer/>
     </main>
   )

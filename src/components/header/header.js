@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next';
 import Description from '../description/description';
 import './header.sass'
 
-const Header = () => {
+const Header = ({onBtnClick}) => {
     const { t, i18n } = useTranslation();
     const [imgState, setImgState] = useState(false)
     return(
@@ -16,7 +16,7 @@ const Header = () => {
                         title={{span: "P2P", text: t("header_title")}}
                         text={t("header_text")}/>
                 </div>
-                <button className="button">{t("header_btn")}</button>
+                <button onClick={onBtnClick} className="button">{t("header_btn")}</button>
                 <div className="circle circle_blue">
                     <img src="./img/plane.svg" alt=""/>
                 </div>
