@@ -1,4 +1,4 @@
-import Description from '../description/description';
+import Description from '../description/Description';
 import { useTranslation } from 'react-i18next';
 import { useState } from 'react';
 import './steps.sass';

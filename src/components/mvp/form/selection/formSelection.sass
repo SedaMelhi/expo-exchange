@@ -1,0 +1,48 @@
+.selection
+    border: 1px solid #EBEBEB
+    border-radius: 12px
+    position: relative
+    transition: .2s linear
+    &__active
+        background: #F5FBFF
+        border: 1px solid #007DFF 
+        border-radius: 12px
+    label
+        display: flex
+        padding: 26px 32px
+        cursor: pointer
+    &:first-child
+        margin-bottom: 20px
+    &__left
+        margin-right: 16px
+    &__title
+        font-size: 1.4rem
+        line-height: 2rem
+        font-weight: 600
+        margin-bottom: 4px
+        color: #1F1F1F
+    &__text
+        color: #70777A 
+    input
+        position: absolute
+        opacity: 0
+             
+@media screen and (max-width: 480px)
+    .selection
+        border-radius: 8px
+        label
+            padding: 24px 26px
+        &__left
+            img
+                width: 38px
+        &__title
+            font-size: 1.1rem
+            line-height: 1.3rem
+        &__text
+            font-size: .9rem
+            line-height: 1.2rem
+
+@media screen and (max-width: 400px)
+    .selection
+        label
+            padding: 24px 16px

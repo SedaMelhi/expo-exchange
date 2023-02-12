@@ -1,0 +1,41 @@
+.content
+    padding: 100px 32px 184px
+    &__wrap
+        max-width: 530px
+        margin: 0 auto
+
+.buttons
+    display: flex
+    justify-content: space-between
+    &__btn
+        width: 259px
+        height: 60px
+        border: 1px solid #007DFF
+        color: #007DFF
+        border-radius: 12px
+        background-color: #fff
+        cursor: pointer
+        &_blue
+            background-color: #007DFF
+            color: #fff
+            margin-left: 12px
+        &_big
+            margin-left: 0
+            width: 100%
+.text-error
+    font-size: 1rem
+    color: #f00
+    margin: 8px 0
+    transition: .2s
+    opacity: 0
+    &_show
+        opacity: 1
+
+@media screen and (max-width: 480px)
+    .content
+        padding: 60px 32px 84px
+    .buttons
+        &__btn
+            height: 48px
+            font-size: 1rem
+            border-radius: 8px

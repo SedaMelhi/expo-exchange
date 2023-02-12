@@ -1,6 +1,6 @@
 import { useTranslation } from 'react-i18next';
-import Description from '../description/description';
-import Service from './service/service';
+import Description from '../description/Description';
+import Service from './service/Service';
 import './services.sass'
 
 const Services = () => {

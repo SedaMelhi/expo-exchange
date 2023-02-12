@@ -1,22 +1,20 @@
+import FormName from './name/FormName';
 import './form.sass';
+import FormSelection from './selection/FormSelection';
+import Cash from './cash/Cash';
+import Address from './address/address';
+import Final from './final/Final';
+import Usdt from './usdt/Usdt';
+import CashForm from './cashForm/CashForm';
+import CashAddress from './cashAddress/CashAddress';
 
-const Form = () => {
+const Form = ({getDate, updateForm, value, date}) => {
+    const usdtForms = [<FormName getDate={getDate} date={date}/>, <FormSelection getDate={getDate} date={date}/>, <Usdt getDate={getDate} date={date}/>, <Address getDate={getDate} date={date}/>, <Final/>]
+    const cashForms = [<FormName getDate={getDate} date={date}/>, <FormSelection getDate={getDate} date={date}/>, <Cash getDate={getDate} date={date}/>, <CashForm getDate={getDate} date={date}/> , <CashAddress getDate={getDate} date={date}/>, <Final/>]
+    const form = value === "cash" ? cashForms[updateForm] : usdtForms[updateForm]
     return(
-        <form className="form">
-            <label>
-                <p className="form__item">Имя и фамилия</p>
-                <input type="text" className="form__input" placeholder="Имя и фамилия"/>
-            </label>
-            <label>
-                <p className="form__item">Номер для связи</p>
-                <input type="tel" className="form__input" placeholder="+7(_ _ _) _ _ _-_ _-_ _"/>
-            </label>
-            <label>
-                <p className="form__item">Способ связи</p>
-                <input type="tel" className="form__input" placeholder="+7(_ _ _) _ _ _-_ _-_ _"/>
-            </label>
-        </form>
+        {...form}
     )
 }
 
-export default Form;
+export default Form

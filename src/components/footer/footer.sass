@@ -19,14 +19,17 @@
         &:nth-child(1)
             grid-area: a
         &:nth-child(2)
-            grid-area: b
+            grid-area: a
         &:nth-child(3)
-            grid-area: c
+            grid-area: b
         &:nth-child(4)
+            grid-area: c
+        &:nth-child(5)
             grid-area: d
 .networks
     display: flex
     width: 100%
+    margin-top: 50px
     &__item
         &:nth-child(2)
             margin: 0 16px
@@ -38,24 +41,35 @@
         justify-content: center
         align-items: center
         border-radius: 8px
-        
-@media screen and (max-width: 768px)
-    .footer
-        grid-template-areas: "a a" "c d" "c d"
-        &__item:nth-child(1)
-            display: flex
-            width: 100%
-            justify-content: space-between
-            align-items: center
-            margin-bottom: 38px
-            img
-                margin: 0
-        &__item:nth-child(2)
-            display: none
-    .networks
-        width: auto
 
 @media screen and (max-width: 768px)
+    .footer
+        grid-template-areas: "a c d"
+        &__item
+            &:nth-child(3)
+                display: none
+          
+@media screen and (max-width: 550px)
+    .footer
+        grid-template-areas: "a e" "c d" "c d"
+        &__item
+            &:nth-child(2)
+                grid-area: e
+            &:nth-child(1)
+                display: flex
+                width: 100%
+                justify-content: space-between
+                align-items: center
+                margin-bottom: 38px
+                img
+                    margin: 0
+        &__item
+            width: 100%
+    .networks
+        margin: 0
+        width: auto
+
+@media screen and (max-width: 550px)
     .footer
         font-size: 1rem
         &__item
@@ -72,17 +86,23 @@
 @media screen and (max-width: 390px)
     .footer
         &__logo
-            width: 130px
+            width: 140px
 
 @media screen and (max-width: 350px)
+    footer
+        .wrap
+            padding: 0 16px
     .networks
         &__item
             width: 32px
             height: 32px
+            &:nth-child(3)
+                img
+                    margin-top: -3px
             img
-                width: 16px
+                width: 12px
             &:nth-child(2)
-                margin: 0 10px
+                margin: 0 4px
 
 @media screen and (max-width: 330px)
     .footer
@@ -90,8 +110,16 @@
             flex-direction: column
             .footer__logo
                 margin-bottom: 15px
-        &__logo
-            width: 150px
-            
+
+@media screen and (max-width: 310px)
+    .footer
+        grid-template-areas: "a a" "e e" "c d" "c d" 
+        &__item
+            &:nth-child(1)
+                margin: 0
+            &:last-child
+                text-align: right           
+    .networks
+        margin: 0 auto 20px
         
         

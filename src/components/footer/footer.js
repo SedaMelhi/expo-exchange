@@ -7,19 +7,17 @@ const Footer = () => {
         <footer>
             <div className="wrap">
             <div className="footer">
-                <div className="footer__item">
-                    <a href="./index.html"><img src="./img/full-logo.png" alt="" className='footer__logo'/></a>
-                    <div className="networks">
-                            <div className="networks__item">
-                                <img src="./img/inst.svg" alt="" />
-                            </div>
-                            <div className="networks__item">
-                                <img src="./img/telegram.svg" alt="" />
-                            </div>
-                            <div className="networks__item">
-                                <img src="./img/ln.svg" alt="" />
-                            </div>
-                        </div>
+                <a href="./index.html" className="footer__item"><img src="./img/full-logo.png" alt="" className='footer__logo'/></a>
+                <div className="networks footer__item" >
+                    <div className="networks__item">
+                        <img src="./img/inst.svg" alt="" />
+                    </div>
+                    <div className="networks__item">
+                        <img src="./img/telegram.svg" alt="" />
+                    </div>
+                    <div className="networks__item">
+                        <img src="./img/ln.svg" alt="" />
+                    </div>
                 </div>
                 <div className="footer__item">
                     <div className="footer__title">{t("landing")}</div>
@@ -48,7 +46,7 @@ const Footer = () => {
                         <a href="mailto:info@expovision.io">info@expovision.io</a>
                     </div>
                     <div className="footer__link">
-                        <a href="tel:+79284444095" >+7 (929) 4444 095</a>
+                        <a href="tel:+79294444095" >+7 (929) 4444 095</a>
                     </div>
                 </div>
             </div>

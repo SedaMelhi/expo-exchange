@@ -1,5 +1,5 @@
 import './faq.sass';
-import SimpleAccordion from './accordion/simple-accordion';
+import SimpleAccordion from './accordion/SimpleAccordion';
 import { useTranslation } from 'react-i18next';
 
 

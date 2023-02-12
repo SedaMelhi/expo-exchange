@@ -1,0 +1,102 @@
+.footer-mvp
+    padding: 50px 0
+    border-top: 1px solid #E6EDF0
+    .footer
+        display: flex
+        align-items: center
+        justify-content: space-between
+        &__title
+            margin: 0
+            margin-right: 42px
+        &__left, &__right
+            display: flex
+            align-items: center
+            justify-content: space-between
+        &__item
+            margin-left: 28px
+    .networks
+        width: auto
+
+@media screen and (max-width:1200px)
+    .footer
+        &-mvp
+            padding: 30px 0
+
+@media screen and (max-width:1100px)
+    .footer
+        &-mvp
+            .footer
+                flex-direction: column
+                width: 100%
+                >div
+                    width: 100%
+                &__left
+                    .footer__item
+                        &:nth-child(3)
+                            display: block
+            .footer__title
+                margin: 0 0 10px
+                font-size: 1.1rem
+                width: 30%
+            .footer__item
+                margin: 0
+                width: 30%
+                &:nth-child(2)
+                    text-align: center
+                &:last-child
+                    text-align: right 
+            .networks
+                display: flex
+                justify-content: flex-end     
+@media screen and (max-width:550px)
+    .footer
+        &-mvp
+            .footer__title
+                width: 50%
+            .footer__item
+                width: 50%
+            .footer__item
+                &:nth-child(2)
+                    display: none
+@media screen and (max-width:500px)
+    .footer 
+        &-mvp      
+            .networks
+                margin: 0 0 10px
+            .footer
+                &__item
+                    &:nth-child(1)
+                        width: auto
+                    &:not(.form__item:last-child)
+                        margin-bottom: 12px
+                &__text
+                    margin-bottom: 4px
+
+@media screen and (max-width:400px)
+    .footer 
+        &-mvp      
+            .networks
+                &__item
+                    &:nth-child(2)
+                        margin: 0 4px
+            .footer
+                &__title
+                    width: auto
+                &__item
+                    width: auto
+                    &:nth-child(1)
+                        width: auto
+                    &:not(.form__item:last-child)
+                        margin-bottom: 12px
+                &__text
+                    margin-bottom: 4px
+
+@media screen and (max-width:320px)
+    .footer 
+        &-mvp      
+            .networks
+                &__item
+                    width: 24px
+                    height: 24px
+                    img
+                        width: 8px

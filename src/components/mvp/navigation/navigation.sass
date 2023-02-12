@@ -12,12 +12,14 @@
 
 .dots
     display: flex
-    justify-content: space-between
+    justify-content: flex-start
     margin: 16px 0 32px
     &__item
         width: 84px
         height: 5px
         background: #EBEBEB
         border-radius: 60px
+        &:not(.dots__item:last-child)
+            margin-right: 5px
         &_active
             background: #007DFF

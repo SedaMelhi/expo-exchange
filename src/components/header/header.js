@@ -1,9 +1,10 @@
 import {useState} from 'react';
 import { useTranslation } from 'react-i18next';
-import Description from '../description/description';
+import { Link } from 'react-router-dom';
+import Description from '../description/Description';
 import './header.sass'
 
-const Header = ({onBtnClick}) => {
+const Header = () => {
     const { t, i18n } = useTranslation();
     const [imgState, setImgState] = useState(false)
     return(
@@ -16,7 +17,7 @@ const Header = ({onBtnClick}) => {
                         title={{span: "P2P", text: t("header_title")}}
                         text={t("header_text")}/>
                 </div>
-                <button onClick={onBtnClick} className="button">{t("header_btn")}</button>
+                <Link to='/Mvp' className="button">{t("header_btn")}</Link>
                 <div className="circle circle_blue">
                     <img src="./img/plane.svg" alt=""/>
                 </div>
