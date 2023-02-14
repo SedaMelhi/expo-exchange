@@ -1,5 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
+import 'react-phone-number-input/style.css'
+import PhoneInput from 'react-phone-number-input'
 import './../form.sass';
 
 const FormName = ({getDate, date}) => {
@@ -12,7 +14,7 @@ const FormName = ({getDate, date}) => {
     useEffect(() => {
         setDateForm({
             name: name,
-            phone: phone,
+            phone: phone ?? "",
             contact: contact,
         })
     }, [name, phone, contact])
@@ -27,7 +29,7 @@ const FormName = ({getDate, date}) => {
             </div>
             <div className='form__item'>
                 <p className="form__text">{t("contact_number")}</p>
-                <input type="tel" className="form__input" value={phone} placeholder="+7(_ _ _) _ _ _-_ _-_ _" onChange={(event) => setPhone(event.target.value)}/>
+                <PhoneInput className="form__input" value={phone} placeholder="+7(_ _ _) _ _ _-_ _-_ _" defaultCountry="RU" onChange={setPhone}/>
             </div>
             <div className='form__item'>
                 <p className="form__text">{t("method")}</p>

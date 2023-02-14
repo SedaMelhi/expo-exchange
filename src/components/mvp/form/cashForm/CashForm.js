@@ -44,6 +44,8 @@ const CashForm = ({getDate, date}) => {
                     }}>
                         <option>{t("lira")} (TRY)</option>
                         <option>{t("ruble")} (RUB)</option>
+                        <option>USD</option>
+                        <option>EUR</option>
                     </select>
                     <div className="form__arrow">
                         <img src="./img/arrow.svg" alt="" className={arrowClass}/>
