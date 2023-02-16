@@ -12,7 +12,7 @@ const Nav = ({items, path}) => {
                 <div className='nav'>
                     <div className="nav__start">
                         <HashLink to='/' className="logo" >
-                            <img src="img/full-logo.png" alt="expovision" />
+                            <img src="img/full-logo.svg" alt="expovision" />
                         </HashLink>
                         <Menu items={items} path={path}/>
                     </div>

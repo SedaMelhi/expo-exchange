@@ -7,7 +7,7 @@ const Footer = () => {
         <footer>
             <div className="wrap">
             <div className="footer">
-                <a href="./index.html" className="footer__item"><img src="./img/full-logo.png" alt="" className='footer__logo'/></a>
+                <a href="./index.html" className="footer__item"><img src="./img/full-logo.svg" alt="" className='footer__logo'/></a>
                 <div className="networks footer__item" >
                     <div className="networks__item">
                         <img src="./img/inst.svg" alt="" />

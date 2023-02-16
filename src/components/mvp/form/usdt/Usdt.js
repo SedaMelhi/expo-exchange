@@ -4,7 +4,7 @@ import './../form.sass';
 const Usdt = ({getDate, date}) => {
     const { t, i18n } = useTranslation();
     const [arrowClass, setArrowClass] = useState("");
-    const [currency, setCurrency] = useState(date.currency ?? `${t("lira")} (TRY)`);
+    const [currency, setCurrency] = useState(date.currency ?? "USD");
     const [money, setMoney] = useState(date.money ?? ""); 
     const [check, setCheck] = useState(date.check ?? "");
     const [dateForm, setDateForm] = useState({});
@@ -42,8 +42,6 @@ const Usdt = ({getDate, date}) => {
                     <select className="form__input form__input_select" value={currency} onChange={(event) => {
                         setCurrency(event.target.value)
                     }}>
-                        <option>{t("lira")} (TRY)</option>
-                        <option>{t("ruble")} (RUB)</option>
                         <option>USD</option>
                         <option>EUR</option>
                     </select>
