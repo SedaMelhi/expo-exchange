@@ -23,7 +23,6 @@ const MvpContent = () => {
         }else{
             setCheckForm(false)
         }   
-        console.log(dateForm);
     }
     const btnPrevHandler = (event) => {
         event.preventDefault();
@@ -35,7 +34,6 @@ const MvpContent = () => {
         }
         step-1 > 0 ? setStep(step-1):setStep(1)
         setDateForm(obj)
-        console.log(dateForm);
     }
     const getDate = (date) => {
         setDateForm(Object.assign(dateForm, date))

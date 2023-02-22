@@ -5,7 +5,7 @@ const Footer = () => {
             <div className="wrap">
                 <div className="footer">
                     <div className="footer__left">
-                        <a href="#" className="footer__title">ExpoExchange ©2022</a>
+                        <a href="#" className="footer__title">EdenWise ©2023</a>
                         <a href="#" className="footer__item">Privacy policy</a>
                         <a href="#" className="footer__item">Terms of use</a>
                     </div>
